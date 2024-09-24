@@ -78,12 +78,14 @@
   margin: 0;
 }
 
-/*TODO style nav link fonts */
-
 .recipes {
   color: #fff;
   background-color: #0a2750;
   padding: 100px 80px 215px;
+}
+
+.recipes__iframe {
+  border: none;
 }
 
 .recipes__title {
