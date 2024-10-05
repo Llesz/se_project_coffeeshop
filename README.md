@@ -14,3 +14,8 @@ This is the second project of the Software Engineering program at TripleTen. It 
 ## Plan on improving the project
 
 Add your ideas here
+
+## Live Demo
+
+[Visit the deployed site](https://github.com/Llesz/se_project_coffeeshop.git)
+
