@@ -8,7 +8,6 @@
     <meta name="author" content="Leslie Hunter" />
     <meta name="keywords" content="HTML, CSS" />
     <link rel="stylesheet" href="./pages/index.css" />
-    <link rel="stylesheet" href="./vendor/normalize.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -27,18 +26,10 @@
             class="nav__logo"
           />
           <ul class="nav__links">
-            <li>
-              <a class="nav__link" href="#recipes">Recipes</a>
-            </li>
-            <li>
-              <a class="nav__link" href="#book-a-table">Book a Table</a>
-            </li>
-            <li>
-              <a class="nav__link" href="#menu">Menu</a>
-            </li>
-            <li>
-              <a class="nav__link" href="#contacts">Contacts</a>
-            </li>
+            <li><a class="nav__link" href="#recipes">Recipes</a></li>
+            <li><a class="nav__link" href="#book-a-table">Book a Table</a></li>
+            <li><a class="nav__link" href="#menu">Menu</a></li>
+            <li><a class="nav__link" href="#about">About</a></li>
           </ul>
         </nav>
         <h1 class="header__title">
@@ -63,6 +54,7 @@
           <p class="header__paragraph">Address</p>
         </div>
       </header>
+
       <main class="content">
         <section class="recipes" id="recipes">
           <h2 class="recipes__title">Recipes</h2>
@@ -103,58 +95,161 @@
             </li>
           </ul>
         </section>
+
         <section class="reservation" id="book-a-table">
-          <h2>Reservation</h2>
-          <form>
-            <label for="reservation-name">Name:</label>
-            <input type="text" id="reservation-name" name="name" required />
-
-            <label for="reservation-date">Date:</label>
-            <input type="date" id="reservation-date" name="date" required />
-
-            <label for="reservation-time">Time:</label>
-            <input type="time" id="reservation-time" name="time" required />
-
-            <label for="reservation-guests">Number of Guests:</label>
-            <input
-              type="number"
-              id="reservation-guests"
-              name="guests"
-              required
-              min="1"
-            />
-            <button type="submit">Book Now</button>
+          <h2 class="reservation__title">Book a table</h2>
+          <form class="reservation__form form">
+            <fieldset class="form__fieldset">
+              <label for="name" class="form__label">Name:</label>
+              <input
+                class="form__input"
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Name Surname"
+                required
+              />
+              <label for="number-of-guests" class="form__label">
+                Number of Guests *</label
+              >
+              <input
+                class="form__input"
+                type="number"
+                id="number-of-guests"
+                name="number-of-guests"
+                min="1"
+                max="8"
+                required
+                placeholder="1-8"
+              />
+              <label for="datetime-local-input" class="form__label">
+                Date & time *
+                <input
+                  class="form__input"
+                  type="datetime-local"
+                  id="datetime-local-input"
+                  required
+                />
+              </label>
+              <label for="email-input" class="form__label">
+                Your email *
+                <input
+                  class="form__input"
+                  type="email"
+                  id="email-input"
+                  placeholder="email@email.com"
+                  required
+                />
+              </label>
+              <label
+                for="terms-checkbox"
+                class="form__label form__label_type_checkbox"
+              >
+                <input
+                  class="form__checkbox"
+                  type="checkbox"
+                  id="terms-checkbox"
+                  required
+                />
+                I agree with the terms of use
+              </label>
+              <button class="form__button" type="submit">Book a table</button>
+            </fieldset>
           </form>
         </section>
+
         <section class="menu" id="menu">
-          <h2>Menu</h2>
-          <ul>
-            <li>Appetizer 1</li>
-            <li>Main Course 1</li>
-            <li>Dessert 1</li>
-            <li>Beverage 1</li>
+          <h2 class="menu__title">Menu</h2>
+          <p class="menu__subtitle">
+            We brew coffee from locally roasted, Fairtrade certified beans and
+            use biodegradable cups. All teas from our collection are $2/cup.
+          </p>
+          <ul class="menu__cards">
+            <li class="card">
+              <h3 class="card__title">Filter</h3>
+              <ul class="card__list">
+                <li class="card__list-item">
+                  Regular (12oz) <span class="card__list-divider"></span> $1
+                </li>
+                <li class="card__list-item">
+                  Large (16oz) <span class="card__list-divider"></span> $1.25
+                </li>
+                <li class="card__list-item">
+                  XL (20oz) <span class="card__list-divider"></span> $1.50
+                </li>
+                <li class="card__list-item">
+                  Party-size (24oz decaf)
+                  <span class="card__list-divider"></span> $1.75
+                </li>
+                <li class="card__list-item">
+                  Iced Coffee (16oz)
+                  <span class="card__list-divider"></span> $1.25
+                </li>
+              </ul>
+            </li>
+
+            <li class="card">
+              <h3 class="card__title">Espresso</h3>
+              <ul class="card__list">
+                <li class="card__list-item">
+                  Macchiato <span class="card__list-divider"></span> $2.25
+                </li>
+                <li class="card__list-item">
+                  Coriado <span class="card__list-divider"></span> $2.50
+                </li>
+                <li class="card__list-item">
+                  Mocha <span class="card__list-divider"></span> $3
+                </li>
+                <li class="card__list-item">
+                  Sunrise in the Bay Area (decaf)
+                  <span class="card__list-divider"></span> $10
+                </li>
+              </ul>
+            </li>
+
+            <li class="card">
+              <h3 class="card__title">Baked Goods</h3>
+              <ul class="card__list">
+                <li class="card__list-item">
+                  Almond Croissant <span class="card__list-divider"></span> $2
+                </li>
+                <li class="card__list-item">
+                  Banana Bread <span class="card__list-divider"></span> $1.75
+                </li>
+                <li class="card__list-item">
+                  Key Lime Pie <span class="card__list-divider"></span> $3
+                </li>
+                <li class="card__list-item">
+                  Blue Velvet Cake
+                  <span class="card__list-divider"></span> $3.75
+                </li>
+                <li class="card__list-item">
+                  Web Cookie <span class="card__list-divider"></span> $2
+                </li>
+                <li class="card__list-item">
+                  Fresh Baguette <span class="card__list-divider"></span> $0.25
+                </li>
+              </ul>
+            </li>
           </ul>
         </section>
-        <section class="contacts" id="contacts">
-          <h2>Contact Us</h2>
-          <p>You can reach us through the following channels:</p>
-          <ul>
-            <li>Email: contact@yourrestaurant.com</li>
-            <li>Phone: (123) 456-7890</li>
-            <li>Address: 123 Main Street, Anytown, USA</li>
-          </ul>
-          <form>
-            <label for="contact-name">Name:</label>
-            <input type="text" id="contact-name" name="name" required />
-            <label for="contact-email">Email:</label>
-            <input type="email" id="contact-email" name="email" required />
-            <label for="contact-message">Message:</label>
-            <textarea id="contact-message" name="message" required></textarea>
-            <button type="submit">Send Message</button>
-          </form>
+
+        <section class="about" id="about">
+          <h2 class="about__title">About</h2>
+          <p class="about__description">
+            We're passionate about Fairtrade certified beans and take pride in
+            supporting local growers. Our mission is to make a positive impact
+            with every cup served. We also believe in sustainability and are
+            proud to use biodegradable materials in our packaging.
+          </p>
         </section>
       </main>
-      <footer class="footer"></footer>
+
+      <footer class="footer">
+        <p class="footer__copyright">
+          All rights reserved &copy; 2024 | Created by Leslie Hunter
+        </p>
+      </footer>
     </div>
   </body>
 </html>
